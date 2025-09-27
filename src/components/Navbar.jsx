@@ -8,7 +8,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { name: 'Home', to: 'home' },
     { name: 'Courses', to: 'courses' },
     { name: 'Gallery', to: 'gallery' },
     { name: 'Reviews', to: 'testimonials' },
