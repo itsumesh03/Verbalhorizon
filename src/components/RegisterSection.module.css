@@ -1,0 +1,178 @@
+/* src/components/RegisterSection.module.css */
+
+.register {
+  padding: 3rem 1rem;
+  background: #f3f6f9;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.08);
+}
+
+/* ---- LEFT: Carousel (70%) ---- */
+.carouselWrapper {
+  position: relative;
+  flex: 70%;
+  height: 480px; /* desktop height */
+  background: #111; /* shows while images load */
+  overflow: hidden;
+}
+
+/* each slide sits on top of each other and fades */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activeSlide {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fits completely and covers area */
+  display: block;
+}
+
+/* prev/next controls */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.12);
+}
+
+.prev { left: 12px; }
+.next { right: 12px; }
+
+.prev:hover, .next:hover {
+  transform: translateY(-50%) scale(1.03);
+}
+
+/* dots */
+.dots {
+  position: absolute;
+  bottom: 14px;
+  width: 100%;
+  text-align: center;
+  z-index: 4;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  border: none;
+  cursor: pointer;
+}
+
+.activeDot {
+  background: maroon; /* highlighted color */
+  box-shadow: 0 4px 12px rgba(255,107,129,0.25);
+}
+
+/* ---- RIGHT: Form (30%) ---- */
+.formWrapper {
+  flex: 30%;
+  background: #ffffff;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: #0b1220;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.input {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #e6e9ec;
+  font-size: 0.95rem;
+  background: #fbfcfd;
+  color: #0b1220;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.09);
+}
+
+.button {
+  margin-top: 6px;
+  background: linear-gradient(90deg,rgb(176, 2, 2),maroon);
+  color: white;
+  padding: 0.95rem;
+  border: none;
+  border-radius: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.98);
+  background: rgb(221, 3, 3);
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .container {
+    flex-direction: column;
+  }
+  .carouselWrapper {
+    height: 300px;
+  }
+  .formWrapper {
+    padding: 1.25rem;
+  }
+}

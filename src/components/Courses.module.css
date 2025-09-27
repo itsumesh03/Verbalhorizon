@@ -1,0 +1,130 @@
+.coursesSection {
+  padding: 2rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem ;
+  margin-top: 0.5rem ;
+  color: black;
+  font-weight: bold;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.scrollWrapper {
+  overflow: hidden;
+  width: 100%;
+  padding:2rem;
+}
+
+.scrollContent {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll-left 40s linear infinite;
+}
+
+/* pause on hover */
+.scrollWrapper:hover .scrollContent {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.courseCard {
+  flex: 0 0 300px;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.3rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.courseCard:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); */
+  background-color: #d9d9d9;
+}
+
+.icon {
+  font-size: 3rem;
+  color: maroon;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.courseCard:hover .icon {
+  color: maroon;
+}
+
+.courseTitle {
+  font-size: 1.5rem;
+  /* color: rgb(83, 2, 2); */
+  color:black;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: maroon;
+}
+
+.duration {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.features li {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.features li::before {
+  content: '✔';
+  color: maroon;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.enrollBtn {
+  display: inline-block;
+  background-color: maroon;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.enrollBtn:hover {
+  background-color: rgb(83, 2, 2);
+  transform: scale(1.05);
+}

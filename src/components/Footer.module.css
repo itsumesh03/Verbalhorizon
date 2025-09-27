@@ -1,0 +1,67 @@
+.footer {
+  background-color: #404040; 
+  color: #fff;
+  padding: 2rem 1rem;
+   font-family: "Poppins", sans-serif;
+}
+.brand {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-left: 10%;
+
+}
+
+.logo {
+  color: maroon;
+}
+
+.accent {
+  color: #fdfcfc;
+}
+
+
+.container {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-right: 4rem;
+}
+
+.contact,
+.links {
+  min-width: 200px;
+}
+
+h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ec5615; /* Highlight on hover */
+}
+
+.copy{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #aaa;
+   
+}

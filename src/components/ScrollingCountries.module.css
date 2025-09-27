@@ -1,0 +1,51 @@
+/* src/components/ScrollingCountries.module.css */
+
+.wrapper {
+  background: maroon; /* Dark background */
+  padding: 14px 0;
+  overflow: hidden;
+margin-top: 30px;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite;
+}
+
+.item {
+  font-size: 2.9rem;
+  font-weight: 600;
+  color: #f1f1f1;
+  margin: 0 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #fdfdfc; /* Golden star */
+  font-size: 1.7rem;
+  margin-left: 4.5rem;
+  
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.track:hover {
+  animation-play-state: paused;
+}
